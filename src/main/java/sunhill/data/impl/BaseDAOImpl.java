@@ -36,4 +36,5 @@ public abstract class BaseDAOImpl<T extends Serializable> implements IBaseDAO<T>
         this.currentIdentifier++;
         return this.currentIdentifier;
     }
+
 }

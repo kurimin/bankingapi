@@ -24,15 +24,16 @@ public class ClientController {
     @RequestMapping(value = UriConstants.CLIENT_URI_ROOT, method = RequestMethod.POST)
     public Client createClient(
             @RequestBody final Client client) {
-        return this.clientService.create(client);
+        final Client result = this.clientService.create(client);
+        return result;
     }
 
     @ResponseStatus(code = HttpStatus.OK)
     @RequestMapping(value = UriConstants.CLIENT_URI, method = RequestMethod.GET)
     public Client getClient(
             @PathVariable(value = UriConstants.CLIENT_PATHVAR) final Long clientId) {
-
-        return this.clientService.get(clientId);
+        final Client result = this.clientService.get(clientId);
+        return result;
     }
 
 }
