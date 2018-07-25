@@ -1,3 +1,7 @@
+# IntelliJ
+*.iml
+/target*
+
 # Compiled class file
 *.class
 
